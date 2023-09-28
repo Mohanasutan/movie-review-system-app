@@ -84,8 +84,7 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
 production:
   <<: *default
-  database: Movie_Review_System_App_production
-  username: Movie_Review_System_App
-  password: <%= ENV["MOVIE_REVIEW_SYSTEM_APP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
